@@ -1,0 +1,124 @@
+(function () {
+   var warn = function () {
+      return ['warn'].concat(Array.prototype.slice.call(arguments));
+   };
+   var error = function () {
+      return ['error'].concat(Array.prototype.slice.call(arguments));
+   };
+
+   module.exports = {
+      'env': {
+         'browser': true
+      },
+      'extends': 'eslint:recommended',
+      'rules': {
+         'no-console': warn(),
+         'no-extra-parens': warn(),
+         'no-unsafe-negation': error(),
+         'curly': error('all'),
+         'dot-location': error('property'),
+         'dot-notation': error(),
+         'eqeqeq': error('always'),
+         'indent': error(3, {
+            'SwitchCase': 1
+          }),
+         'linebreak-style': error('windows'),
+         'quotes': error('single', {
+            avoidEscape: true
+         }),
+         'semi': error('always'),
+         'strict': error('function'),
+         'array-callback-return': error(),
+         'block-scoped-var': error(),
+         'consistent-return': error(),
+         'no-alert': warn(),
+         'no-else-return': warn(),
+         'no-empty-function': warn(),
+         'no-eval': error(),
+         'no-extend-native': warn(),
+         'no-global-assign': error(),
+         'no-implicit-globals': warn(),
+         'no-implied-eval': error(),
+         'no-iterator': error(),
+         'no-labels': error(),
+         'no-lone-blocks': error(),
+         'no-loop-func': warn(),
+         'no-magic-numbers': error({
+            ignoreArrayIndexes: true,
+            ignore: [1]
+         }),
+         'no-multi-spaces': error(),
+         'no-multi-str': error(),
+         'no-new-func': error(),
+         'no-new-wrappers': error(),
+         'no-new': error(),
+         'no-octal-escape': error(),
+         'no-proto': error(),
+         'no-return-assign': error(),
+         'no-sequences': error(),
+         'no-throw-literal': warn(),
+         'no-unmodified-loop-condition': warn(),
+         'no-unused-expressions': error({
+            allowShortCircuit: true,
+            allowTernary: true
+         }),
+         'no-useless-call': error(),
+         'no-useless-concat': error(),
+         'no-useless-escape': error(),
+         'no-useless-return': error(),
+         'no-void': error(),
+         'no-with': error(),
+         'radix': error(),
+         'vars-on-top': warn(),
+         'wrap-iife': error('any'),
+         'no-shadow': error(),
+         'no-undef-init': error(),
+         'no-undefined': warn(),
+         'no-use-before-define': error(),
+         'array-bracket-spacing': error('never'),
+         'brace-style': error(),
+         'camelcase': error(),
+         'comma-dangle': error(),
+         'comma-spacing': error(),
+         'comma-style': error(),
+         'computed-property-spacing': error(),
+         'func-call-spacing': error(),
+         'func-names': error('never'),
+         'func-style': error(),
+         'key-spacing': error(),
+         'keyword-spacing': error(),
+         'max-statements-per-line': error(),
+         'new-cap': error(),
+         'new-parens': error(),
+         'no-array-constructor': error(),
+         'no-bitwise': error(),
+         'no-lonely-if': error(),
+         'no-mixed-operators': error(),
+         'no-multi-assign': error(),
+         'no-multiple-empty-lines': error(),
+         'no-nested-ternary': warn(),
+         'no-new-object': error(),
+         'no-tabs': error(),
+         'no-trailing-spaces': error({skipBlankLines: true}),
+         'no-unneeded-ternary': error(),
+         'no-whitespace-before-property': error(),
+         'object-curly-newline': error(),
+         'object-curly-spacing': error(),
+         'object-property-newline': error(),
+         'one-var': error('never'),
+         'padded-blocks': error({
+            blocks: 'never',
+            classes: 'never',
+            switches: 'never'
+         }),
+         'quote-props': error('as-needed'),
+         'semi-spacing': error(),
+         'space-before-blocks': error(),
+         'space-before-function-paren': error('never'),
+         'space-in-parens': error(),
+         'space-infix-ops': error(),
+         'space-unary-ops': error(),
+         'unicode-bom': warn()
+      }
+   };
+}());
