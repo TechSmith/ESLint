@@ -99,9 +99,7 @@
          'no-trailing-spaces': error({skipBlankLines: true}),
          'no-unneeded-ternary': error(),
          'no-whitespace-before-property': error(),
-         'object-curly-newline': error(),
          'object-curly-spacing': error(),
-         'object-property-newline': error(),
          'one-var': error('never'),
          'padded-blocks': error({
             blocks: 'never',
