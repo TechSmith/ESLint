@@ -7,7 +7,7 @@ Linting rules for JavaScript (ESLint)
 
 "devDependencies": {
     "eslint": "^3.14.1",
-    "eslint-config-techsmith": "git+ssh://git@github.com/TechSmith/ESLint.git#0.2.0"
+    "eslint-config-techsmith": "git+ssh://git@github.com/TechSmith/ESLint.git#<latest_version>"
   }
 ```
 
