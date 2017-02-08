@@ -11,4 +11,23 @@ Linting rules for JavaScript (ESLint)
   }
 ```
 
-- More to come...
+- Create a .eslintrc.js file in the root of your app. e.g.:
+
+```javascript
+
+module.exports = {
+   extends: ['techsmith/es6'],
+};
+```
+
+or 
+
+```javascript
+
+module.exports = {
+   extends: ['techsmith'],
+};
+```
+
+- Configure WebStorm to know about your linting rules: https://www.jetbrains.com/help/webstorm/2016.3/eslint.html
+- Run eslint as part of your build to ensure your JavaScript is up to snuff!
