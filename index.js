@@ -42,7 +42,7 @@
          'no-loop-func': error(),
          'no-magic-numbers': error({
             ignoreArrayIndexes: true,
-            ignore: [1]
+            ignore: [-1, 0, 1, 2, 10, 100, 1000]
          }),
          'no-multi-spaces': error(),
          'no-multi-str': error(),
