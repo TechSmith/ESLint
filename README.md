@@ -11,21 +11,32 @@ Linting rules for JavaScript (ESLint)
   }
 ```
 
-- Create a .eslintrc.js file in the root of your app. e.g.:
+- Create an `eslintConfig` entry in your package.json file referencing the TechSmith ESLint rules, e.g.:
+
+```
+"eslintConfig": {
+    "extends": [
+      "techsmith/es6"
+    ]
+  }
+```
+
+or 
+
+```
+"eslintConfig": {
+    "extends": [
+      "techsmith"
+    ]
+  }
+```
+
+- alternatively, you can create a .eslintrc.js file in the root of your app. e.g.:
 
 ```javascript
 
 module.exports = {
    extends: ['techsmith/es6'],
-};
-```
-
-or 
-
-```javascript
-
-module.exports = {
-   extends: ['techsmith'],
 };
 ```
 
