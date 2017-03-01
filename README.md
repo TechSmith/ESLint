@@ -41,4 +41,17 @@ module.exports = {
 ```
 
 - Configure WebStorm to know about your linting rules: https://www.jetbrains.com/help/webstorm/2016.3/eslint.html
+
+#Integrating into your build
+
 - Run eslint as part of your build to ensure your JavaScript is up to snuff!
+- Add the following to your package.json file
+
+```javascript
+"scripts": {
+    "lint": "eslint app/**/*.{js,jsx} __tests__/**/*.{js,jsx}",
+}
+```
+
+- Run the script as a "custom script" build step: `npm run lint` or `yarn lint`
+- Advanced users can consider integrating ESLint into their build via other mechanics (e.g. a WebPack loader or a grunt step)
