@@ -1,7 +1,7 @@
 # ESLint
 Linting rules for JavaScript (ESLint)
 
-#Use
+## Use
 - Reference this package and eslint in your packages.json, e.g.:
 ```javascript
 
@@ -42,7 +42,7 @@ module.exports = {
 
 - Configure WebStorm to know about your linting rules: https://www.jetbrains.com/help/webstorm/2016.3/eslint.html
 
-#Integrating into your build
+## Integrating into your build
 
 - Run eslint as part of your build to ensure your JavaScript is up to snuff!
 - Add the following to your package.json file
