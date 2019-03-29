@@ -17,7 +17,6 @@
       "object-literal-shorthand": false,
       "no-unused-expression": [true, "allow-fast-null-checks"],
       "no-magic-numbers": false,
-      "no-unused-variable": true,
       "ban": [true, ["alert", "prompt", "confirm"]],
       "array-bracket-spacing": [true, "never"],
       "brace-style": [true, "1tbs"],
