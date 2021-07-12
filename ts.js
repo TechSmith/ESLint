@@ -48,6 +48,7 @@
          'error',
          3,
          {
+            'SwitchCase': 1,
             'FunctionDeclaration': {
                'parameters': 'first'
             },
@@ -116,6 +117,16 @@
       ],
       '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/unified-signatures': 'error',
+      "@typescript-eslint/explicit-function-return-type": [
+         "error",
+         {
+            "allowExpressions": true,
+            "allowTypedFunctionExpressions": true,
+            "allowHigherOrderFunctions": false,
+            "allowDirectConstAssertionInArrowFunctions": false,
+            "allowConciseArrowFunctionExpressionsStartingWithVoid": false
+         }
+      ],
       'arrow-body-style': [
          'error', 
          'as-needed'
@@ -137,10 +148,6 @@
          'undefined'
       ],
       'id-match': 'error',
-      'import/order': 'off',
-      'jsdoc/check-alignment': 'error',
-      'jsdoc/check-indentation': 'error',
-      'jsdoc/newline-after-description': 'error',
       'max-classes-per-file': [
          'error',
          1
@@ -175,24 +182,7 @@
       ],
       'use-isnan': 'error',
       'valid-typeof': 'off',
-      'linebreak-style': 'off',
-      '@typescript-eslint/tslint/config': [
-         'error',
-         {
-            'rules': {
-               'import-spacing': true,
-               'whitespace': [
-                  true,
-                  'check-branch',
-                  'check-decl',
-                  'check-operator',
-                  'check-separator',
-                  'check-type',
-                  'check-typecast'
-               ]
-            }
-         }
-      ]
+      'linebreak-style': 'off'
    };
 
    module.exports = {
@@ -210,11 +200,8 @@
          sourceType: 'module'
       },
       plugins: [
-         'eslint-plugin-import',
-         'eslint-plugin-jsdoc',
          'eslint-plugin-prefer-arrow',
-         '@typescript-eslint',
-         '@typescript-eslint/tslint'
+         '@typescript-eslint'
       ],
       rules: Object.assign({}, commonRules, es6Rules, typescriptRules)
    };
