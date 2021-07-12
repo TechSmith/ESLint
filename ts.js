@@ -48,6 +48,7 @@
          'error',
          3,
          {
+            'SwitchCase': 1,
             'FunctionDeclaration': {
                'parameters': 'first'
             },
