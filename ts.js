@@ -117,6 +117,16 @@
       ],
       '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/unified-signatures': 'error',
+      "@typescript-eslint/explicit-function-return-type": [
+         "error",
+         {
+            "allowExpressions": true,
+            "allowTypedFunctionExpressions": true,
+            "allowHigherOrderFunctions": false,
+            "allowDirectConstAssertionInArrowFunctions": false,
+            "allowConciseArrowFunctionExpressionsStartingWithVoid": false
+         }
+      ],
       'arrow-body-style': [
          'error', 
          'as-needed'
