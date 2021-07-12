@@ -138,10 +138,6 @@
          'undefined'
       ],
       'id-match': 'error',
-      'import/order': 'off',
-      'jsdoc/check-alignment': 'error',
-      'jsdoc/check-indentation': 'error',
-      'jsdoc/newline-after-description': 'error',
       'max-classes-per-file': [
          'error',
          1
@@ -176,24 +172,7 @@
       ],
       'use-isnan': 'error',
       'valid-typeof': 'off',
-      'linebreak-style': 'off',
-      '@typescript-eslint/tslint/config': [
-         'error',
-         {
-            'rules': {
-               'import-spacing': true,
-               'whitespace': [
-                  true,
-                  'check-branch',
-                  'check-decl',
-                  'check-operator',
-                  'check-separator',
-                  'check-type',
-                  'check-typecast'
-               ]
-            }
-         }
-      ]
+      'linebreak-style': 'off'
    };
 
    module.exports = {
@@ -211,11 +190,8 @@
          sourceType: 'module'
       },
       plugins: [
-         'eslint-plugin-import',
-         'eslint-plugin-jsdoc',
          'eslint-plugin-prefer-arrow',
-         '@typescript-eslint',
-         '@typescript-eslint/tslint'
+         '@typescript-eslint'
       ],
       rules: Object.assign({}, commonRules, es6Rules, typescriptRules)
    };
