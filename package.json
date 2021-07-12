@@ -3,8 +3,5 @@
   "version": "1.4.0",
   "peerDependencies": {
     "eslint": ">=3.14.1"
-  },
-  "dependencies": {
-    "tslint-eslint-rules": "^4.1.1"
   }
 }
