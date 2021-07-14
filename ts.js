@@ -72,6 +72,7 @@
       ],
       '@typescript-eslint/member-ordering': 'error',
       '@typescript-eslint/naming-convention': 'off',
+      'no-empty-function': 'off',
       '@typescript-eslint/no-empty-function': 'error',
       '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -83,6 +84,15 @@
          'error',
          {
             'hoist': 'all'
+         }
+      ],
+      'no-extra-parens': 'off',
+      '@typescript-eslint/no-extra-parens': [
+         'error',
+         'all',
+         {
+            'nestedBinaryExpressions': false,
+            'ignoreJSX': 'all' 
          }
       ],
       '@typescript-eslint/no-unused-expressions': [
@@ -127,6 +137,7 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
       'arrow-body-style': [
          'error', 
          'as-needed'

@@ -5,7 +5,10 @@
 
    module.exports = {
       'no-console': error(),
-      'no-extra-parens': error(),
+      'no-extra-parens': error('all', {
+         nestedBinaryExpressions: false,
+         ignoreJSX: 'all'
+      }),
       'no-unsafe-negation': error(),
       'curly': error('all'),
       'dot-location': error('property'),
@@ -58,7 +61,7 @@
       'no-useless-concat': error(),
       'no-useless-escape': error(),
       'no-useless-return': error(),
-      'no-void': error(),
+      'no-void': error({allowAsStatement: true}),
       'no-with': error(),
       'radix': error(),
       'vars-on-top': error(),
