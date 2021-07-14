@@ -7,7 +7,6 @@
       'arrow-parens': error('as-needed'),
       'arrow-spacing': error(),
       'generator-star-spacing': error(),
-      'no-confusing-arrow': error(),
       'no-duplicate-imports': error(),
       'no-useless-computed-key': error(),
       'no-useless-constructor': error(),
