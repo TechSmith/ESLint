@@ -72,6 +72,7 @@
       ],
       '@typescript-eslint/member-ordering': 'error',
       '@typescript-eslint/naming-convention': 'off',
+      'no-empty-function': 'off',
       '@typescript-eslint/no-empty-function': 'error',
       '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
