@@ -128,6 +128,7 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
       'arrow-body-style': [
          'error', 
          'as-needed'
