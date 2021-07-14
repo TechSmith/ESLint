@@ -58,7 +58,7 @@
       'no-useless-concat': error(),
       'no-useless-escape': error(),
       'no-useless-return': error(),
-      'no-void': error(),
+      'no-void': error({allowAsStatement: true}),
       'no-with': error(),
       'radix': error(),
       'vars-on-top': error(),
