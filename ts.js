@@ -2,11 +2,10 @@
    var commonRules = require('./common-rules');
    var es6Rules = require('./es6-rules');
    var typescriptRules = {
-      '@typescript-eslint/adjacent-overload-signatures': 'error',
       '@typescript-eslint/array-type': [
          'error',
          {
-            'default': 'array-simple'
+            'default': 'array'
          }
       ],
       '@typescript-eslint/ban-types': [
@@ -72,12 +71,7 @@
       ],
       '@typescript-eslint/member-ordering': 'error',
       '@typescript-eslint/naming-convention': 'off',
-      'no-empty-function': 'off',
-      '@typescript-eslint/no-empty-function': 'error',
-      '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-misused-new': 'error',
-      '@typescript-eslint/no-namespace': 'error',
       '@typescript-eslint/no-parameter-properties': 'off',
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': [
@@ -101,13 +95,14 @@
             'allowShortCircuit': true
          }
       ],
+      'no-empty-function': 'off',
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       'no-use-before-define': 'off',
       '@typescript-eslint/no-use-before-define': 'error',
       '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'error',
-      '@typescript-eslint/prefer-namespace-keyword': 'error',
       '@typescript-eslint/quotes': [
          'error',
          'single'
@@ -137,63 +132,7 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
-      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
-      'arrow-body-style': [
-         'error', 
-         'as-needed'
-      ],
-      'complexity': 'off',
-      'constructor-super': 'error',
-      'curly': 'error',
-      'guard-for-in': 'error',
-      'id-blacklist': [
-         'error',
-         'any',
-         'Number',
-         'number',
-         'String',
-         'string',
-         'Boolean',
-         'boolean',
-         'Undefined',
-         'undefined'
-      ],
-      'id-match': 'error',
-      'max-classes-per-file': [
-         'error',
-         1
-      ],
-      'max-len': 'off',
-      'no-caller': 'error',
-      'no-cond-assign': 'error',
-      'no-debugger': 'error',
-      'no-empty': 'error',
-      'no-fallthrough': 'off',
-      'no-invalid-this': 'off',
-      'no-underscore-dangle': 'error',
-      'no-unsafe-finally': 'error',
-      'no-unused-labels': 'error',
-      'prefer-arrow/prefer-arrow-functions': 'error',
-      'space-before-function-paren': [
-         'error',
-         {
-            'anonymous': 'never',
-            'asyncArrow': 'always',
-            'named': 'never'
-         }
-      ],
-      'spaced-comment': [
-         'error',
-         'always',
-         {
-            'markers': [
-               '/'
-            ]
-         }
-      ],
-      'use-isnan': 'error',
-      'valid-typeof': 'off',
-      'linebreak-style': 'off'
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}]
    };
 
    module.exports = {
@@ -203,7 +142,8 @@
       },
       extends: [
          'plugin:@typescript-eslint/recommended',
-         'plugin:@typescript-eslint/recommended-requiring-type-checking'
+         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+         'eslint:recommended'
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {

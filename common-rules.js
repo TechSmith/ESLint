@@ -107,10 +107,52 @@
       'quote-props': error('as-needed'),
       'semi-spacing': error(),
       'space-before-blocks': error(),
-      'space-before-function-paren': error('never'),
+      'space-before-function-paren': error({
+         'anonymous': 'never',
+         'asyncArrow': 'always',
+         'named': 'never'
+      }),
       'space-in-parens': error(),
       'space-infix-ops': error(),
       'space-unary-ops': error(),
-      'unicode-bom': error()
+      'unicode-bom': error(),
+      'no-invalid-this': 'error',
+      'no-caller': 'error',
+      'id-match': 'error',
+      'id-denylist': [
+         'error',
+         'any',
+         'Number',
+         'number',
+         'String',
+         'string',
+         'Boolean',
+         'boolean',
+         'Undefined',
+         'undefined'
+      ],
+      'id-blacklist': [ // deprecated
+         'error',
+         'any',
+         'Number',
+         'number',
+         'String',
+         'string',
+         'Boolean',
+         'boolean',
+         'Undefined',
+         'undefined'
+      ],
+      'guard-for-in': 'error',
+      'spaced-comment': [
+         'error',
+         'always',
+         {
+            'markers': [
+               '/'
+            ]
+         }
+      ],
+      'no-underscore-dangle': 'error',
    };
 }());
