@@ -144,5 +144,15 @@
          'undefined'
       ],
       'guard-for-in': 'error',
+      'spaced-comment': [
+         'error',
+         'always',
+         {
+            'markers': [
+               '/'
+            ]
+         }
+      ],
+      'no-underscore-dangle': 'error',
    };
 }());

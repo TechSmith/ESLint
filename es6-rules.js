@@ -22,16 +22,6 @@
       'template-curly-spacing': error(),
       'yield-star-spacing': error(),
       'jsx-quotes': error(),
-      'spaced-comment': [
-         'error',
-         'always',
-         {
-            'markers': [
-               '/'
-            ]
-         }
-      ],
-      'no-underscore-dangle': 'error',
       'prefer-arrow/prefer-arrow-functions': 'error',
       'max-classes-per-file': [
          'error',
