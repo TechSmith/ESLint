@@ -6,7 +6,7 @@
       '@typescript-eslint/array-type': [
          'error',
          {
-            'default': 'array-simple'
+            'default': 'array'
          }
       ],
       '@typescript-eslint/ban-types': [
