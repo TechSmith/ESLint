@@ -33,6 +33,24 @@ ESLint rules for JavaScript and TypeScript
 
 - Run the script as a "custom script" build step: `npm run lint` or `yarn lint`
 - Advanced users can consider integrating ESLint into their build via other mechanics (e.g. a WebPack loader or a grunt step)
+- If you have both JS and TS in your source code, you may want to configure linting for both JS and TS using separate rule sets. Here's an example config file for how one might do that:
+
+```javascript
+{
+   "ignorePatterns": ["node_modules/", "dist/"],
+   "extends": ["techsmith/es6"],
+   "overrides": [
+      {
+         "files": ["**/*.ts", "**/*.tsx"],
+         "extends": ["techsmith/ts"],
+      }
+   ],
+   "parserOptions": {
+      "ecmaVersion": 2020
+   },
+   "parser": "@typescript-eslint/parser"
+}
+```
 
 ## Releasing
 
