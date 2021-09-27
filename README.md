@@ -26,9 +26,10 @@ ESLint rules for JavaScript and TypeScript
 
 ```javascript
 "scripts": {
-    "lint": "eslint --color src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint --cache --color src/**/*.{js,jsx,ts,tsx}",
 }
 ```
+  - This example will lint all JS and TS files in your `src` folder. Dependending on your folder structure, you may need to tweak this. Another option is to just lint everything, e.g. `eslint . --cache --color --ext .jsx,.js,.ts,.tsx`, but in that case, you'll want to be careful to configure your ESLint to ignore `node_modules`, build output folders, and other things that shouldn't be linted
 
 - Run the script as a "custom script" build step: `npm run lint` or `yarn lint`
 - Advanced users can consider integrating ESLint into their build via other mechanics (e.g. a WebPack loader or a grunt step)
