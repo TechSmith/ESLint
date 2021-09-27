@@ -174,14 +174,6 @@
       'no-unsafe-finally': 'error',
       'no-unused-labels': 'error',
       'prefer-arrow/prefer-arrow-functions': 'error',
-      'space-before-function-paren': [
-         'error',
-         {
-            'anonymous': 'never',
-            'asyncArrow': 'always',
-            'named': 'never'
-         }
-      ],
       'spaced-comment': [
          'error',
          'always',
