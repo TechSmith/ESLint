@@ -2,7 +2,6 @@
    var commonRules = require('./common-rules');
    var es6Rules = require('./es6-rules');
    var typescriptRules = {
-      '@typescript-eslint/adjacent-overload-signatures': 'error',
       '@typescript-eslint/array-type': [
          'error',
          {
@@ -72,12 +71,7 @@
       ],
       '@typescript-eslint/member-ordering': 'error',
       '@typescript-eslint/naming-convention': 'off',
-      'no-empty-function': 'off',
-      '@typescript-eslint/no-empty-function': 'error',
-      '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-misused-new': 'error',
-      '@typescript-eslint/no-namespace': 'error',
       '@typescript-eslint/no-parameter-properties': 'off',
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': [
@@ -107,7 +101,6 @@
       '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'error',
-      '@typescript-eslint/prefer-namespace-keyword': 'error',
       '@typescript-eslint/quotes': [
          'error',
          'single'
