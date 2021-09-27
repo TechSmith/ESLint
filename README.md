@@ -1,17 +1,10 @@
 # ESLint
-Linting rules for JavaScript and TypeScript (ESLint)
+ESLint rules for JavaScript and TypeScript
 
 ## Use
-- Reference this package and eslint in your packages.json, e.g.:
-```javascript
-
-"devDependencies": {
-    "eslint": "^6.30.0",
-    "eslint-config-techsmith": "^2.1.0"
-  }
-```
-
-- Depending on which rule set you use, you may need to install additional plugins to your dependencies. You should get helpful error messages pointing out the needed dependencies when you go to run the linting. 
+- Install this package and eslint, e.g. `npm install --save-dev eslint-config-techsmith eslint`
+- Decide which ruleset is appropriate for you. If you're using TypeScript, you should use the `techsmith/ts` ruleset. For ES6 (or modern JS in general) you should use `techsmith/es6`. For old school JS, you can use the plain `techsmith` ruleset. The examples below are for the `techsmith/es6` ruleset, so substitute as appropriate.
+- Depending on which ruleset you use, you may need to install additional plugins to your dependencies. Once you go to run the eslint command, you may get an error like `ESLint couldn't find the plugin "eslint-plugin-prefer-arrow".` - fix this by installing the plugin, e.g. `npm install --save-dev eslint-plugin-prefer-arrow`. The reason why these depedencies aren't explicit dependencies of this package is that the plugins you'll need depends on the ruleset you use.
 - Create an `eslintConfig` entry in your package.json file referencing the TechSmith ESLint rules, e.g.:
 
 ```
@@ -22,25 +15,7 @@ Linting rules for JavaScript and TypeScript (ESLint)
   }
 ```
 
-or 
-
-```
-"eslintConfig": {
-    "extends": [
-      "techsmith"
-    ]
-  }
-```
-
-- alternatively, you can create a .eslintrc.js file in the root of your app. e.g.:
-
-```javascript
-
-module.exports = {
-   extends: ['techsmith/es6'],
-};
-```
-
+- See ESLint docs for additional options for configuring ESLint
 - If you're using VSCode, you should install eslint plugins to get in-IDE linting
 - If you're using webstorm, this may help you integrate these rules into the IDE: https://www.jetbrains.com/help/webstorm/2016.3/eslint.html
 
@@ -51,12 +26,31 @@ module.exports = {
 
 ```javascript
 "scripts": {
-    "lint": "eslint app/**/*.{js,jsx} __tests__/**/*.{js,jsx}",
+    "lint": "eslint --cache --color src/**/*.{js,jsx,ts,tsx}",
 }
 ```
+  - This example will lint all JS and TS files in your `src` folder. Dependending on your folder structure, you may need to tweak this. Another option is to just lint everything, e.g. `eslint . --cache --color --ext .jsx,.js,.ts,.tsx`, but in that case, you'll want to be careful to configure your ESLint to ignore `node_modules`, build output folders, and other things that shouldn't be linted
 
 - Run the script as a "custom script" build step: `npm run lint` or `yarn lint`
 - Advanced users can consider integrating ESLint into their build via other mechanics (e.g. a WebPack loader or a grunt step)
+- If you have both JS and TS in your source code, you may want to configure linting for both JS and TS using separate rule sets. Here's an example config file for how one might do that:
+
+```javascript
+{
+   "ignorePatterns": ["node_modules/", "dist/"],
+   "extends": ["techsmith/es6"],
+   "overrides": [
+      {
+         "files": ["**/*.ts", "**/*.tsx"],
+         "extends": ["techsmith/ts"],
+      }
+   ],
+   "parserOptions": {
+      "ecmaVersion": 2020
+   },
+   "parser": "@typescript-eslint/parser"
+}
+```
 
 ## Releasing
 
