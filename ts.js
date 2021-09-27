@@ -137,55 +137,7 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
-      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
-      'arrow-body-style': [
-         'error', 
-         'as-needed'
-      ],
-      'complexity': 'off',
-      'constructor-super': 'error',
-      'curly': 'error',
-      'guard-for-in': 'error',
-      'id-blacklist': [
-         'error',
-         'any',
-         'Number',
-         'number',
-         'String',
-         'string',
-         'Boolean',
-         'boolean',
-         'Undefined',
-         'undefined'
-      ],
-      'id-match': 'error',
-      'max-classes-per-file': [
-         'error',
-         1
-      ],
-      'max-len': 'off',
-      'no-caller': 'error',
-      'no-cond-assign': 'error',
-      'no-debugger': 'error',
-      'no-empty': 'error',
-      'no-fallthrough': 'off',
-      'no-invalid-this': 'off',
-      'no-underscore-dangle': 'error',
-      'no-unsafe-finally': 'error',
-      'no-unused-labels': 'error',
-      'prefer-arrow/prefer-arrow-functions': 'error',
-      'spaced-comment': [
-         'error',
-         'always',
-         {
-            'markers': [
-               '/'
-            ]
-         }
-      ],
-      'use-isnan': 'error',
-      'valid-typeof': 'off',
-      'linebreak-style': 'off'
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}]
    };
 
    module.exports = {
@@ -195,7 +147,8 @@
       },
       extends: [
          'plugin:@typescript-eslint/recommended',
-         'plugin:@typescript-eslint/recommended-requiring-type-checking'
+         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+         'eslint:recommended'
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {

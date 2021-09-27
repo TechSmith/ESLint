@@ -15,6 +15,9 @@
             jsx: true
          }
       },
+      plugins: [
+         'eslint-plugin-prefer-arrow',
+      ],
       rules: Object.assign({}, commonRules, es6Rules)
    };
 }());

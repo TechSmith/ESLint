@@ -21,6 +21,25 @@
       'rest-spread-spacing': error(),
       'template-curly-spacing': error(),
       'yield-star-spacing': error(),
-      'jsx-quotes': error()
+      'jsx-quotes': error(),
+      'spaced-comment': [
+         'error',
+         'always',
+         {
+            'markers': [
+               '/'
+            ]
+         }
+      ],
+      'no-underscore-dangle': 'error',
+      'prefer-arrow/prefer-arrow-functions': 'error',
+      'max-classes-per-file': [
+         'error',
+         1
+      ],
+      'arrow-body-style': [
+         'error',
+         'as-needed'
+      ],
    };
 }());
