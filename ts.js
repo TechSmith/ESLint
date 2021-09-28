@@ -132,7 +132,8 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
-      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}]
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
+      '@typescript-eslint/no-misused-promises': ['error', {'checksConditionals': true, 'checksVoidReturn': false}]
    };
 
    module.exports = {
