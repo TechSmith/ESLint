@@ -80,15 +80,6 @@
             'hoist': 'all'
          }
       ],
-      'no-extra-parens': 'off',
-      '@typescript-eslint/no-extra-parens': [
-         'error',
-         'all',
-         {
-            'nestedBinaryExpressions': false,
-            'ignoreJSX': 'all' 
-         }
-      ],
       '@typescript-eslint/no-unused-expressions': [
          'error',
          {
@@ -132,7 +123,8 @@
             "allowConciseArrowFunctionExpressionsStartingWithVoid": false
          }
       ],
-      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}]
+      '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
+      '@typescript-eslint/no-misused-promises': ['error', {'checksConditionals': true, 'checksVoidReturn': false}]
    };
 
    module.exports = {

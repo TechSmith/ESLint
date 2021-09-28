@@ -5,10 +5,6 @@
 
    module.exports = {
       'no-console': error(),
-      'no-extra-parens': error('all', {
-         nestedBinaryExpressions: false,
-         ignoreJSX: 'all'
-      }),
       'no-unsafe-negation': error(),
       'curly': error('all'),
       'dot-location': error('property'),
@@ -17,7 +13,6 @@
       'indent': error(3, {
          'SwitchCase': 1
       }),
-      'linebreak-style': error('windows'),
       'quotes': error('single', {
          avoidEscape: true
       }),
@@ -88,7 +83,18 @@
       'no-array-constructor': error(),
       'no-bitwise': error(),
       'no-lonely-if': error(),
-      'no-mixed-operators': error(),
+      "no-mixed-operators": [
+         "error",
+         {
+            "groups": [
+               ["&", "|", "^", "~", "<<", ">>", ">>>"],
+               ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+               ["&&", "||"],
+               ["in", "instanceof"]
+            ],
+            "allowSamePrecedence": true
+         }
+      ],
       'no-multi-assign': error(),
       'no-multiple-empty-lines': error(),
       'no-nested-ternary': error(),
@@ -152,7 +158,6 @@
                '/'
             ]
          }
-      ],
-      'no-underscore-dangle': 'error',
+      ]
    };
 }());
