@@ -158,7 +158,6 @@
                '/'
             ]
          }
-      ],
-      'no-underscore-dangle': 'error',
+      ]
    };
 }());
