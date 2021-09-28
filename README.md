@@ -47,8 +47,25 @@ ESLint rules for JavaScript and TypeScript
    ],
    "parserOptions": {
       "ecmaVersion": 2020
-   },
-   "parser": "@typescript-eslint/parser"
+   }
+}
+```
+
+- If you're using React, you can additionally use the React rulesets `techsmith/react` or `techsmith/react-ts` (this will require installing additional plugins - run the linting and you should get error messages specifying which ones). Here's an example config that runs React linting for both JS and TS:
+
+```javascript
+{
+   "ignorePatterns": ["node_modules/", "dist/"],
+   "extends": ["techsmith/es6", "techsmith/react"]
+   "overrides": [
+      {
+         "files": ["**/*.ts", "**/*.tsx"],
+         "extends": ["techsmith/ts", "techsmith/react-ts"]
+      }
+   ],
+   "parserOptions": {
+      "ecmaVersion": 2020
+   }
 }
 ```
 
