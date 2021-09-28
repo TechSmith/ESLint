@@ -5,10 +5,6 @@
 
    module.exports = {
       'no-console': error(),
-      'no-extra-parens': error('all', {
-         nestedBinaryExpressions: false,
-         ignoreJSX: 'all'
-      }),
       'no-unsafe-negation': error(),
       'curly': error('all'),
       'dot-location': error('property'),

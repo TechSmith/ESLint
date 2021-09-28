@@ -80,15 +80,6 @@
             'hoist': 'all'
          }
       ],
-      'no-extra-parens': 'off',
-      '@typescript-eslint/no-extra-parens': [
-         'error',
-         'all',
-         {
-            'nestedBinaryExpressions': false,
-            'ignoreJSX': 'all' 
-         }
-      ],
       '@typescript-eslint/no-unused-expressions': [
          'error',
          {
