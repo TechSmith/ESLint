@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-techsmith",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "peerDependencies": {
     "eslint": ">=6.30.0"
   }
