@@ -84,7 +84,18 @@
       'no-array-constructor': error(),
       'no-bitwise': error(),
       'no-lonely-if': error(),
-      'no-mixed-operators': error(),
+      "no-mixed-operators": [
+         "error",
+         {
+            "groups": [
+               ["&", "|", "^", "~", "<<", ">>", ">>>"],
+               ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+               ["&&", "||"],
+               ["in", "instanceof"]
+            ],
+            "allowSamePrecedence": true
+         }
+      ],
       'no-multi-assign': error(),
       'no-multiple-empty-lines': error(),
       'no-nested-ternary': error(),
