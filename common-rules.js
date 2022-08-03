@@ -137,18 +137,6 @@
          'Undefined',
          'undefined'
       ],
-      'id-blacklist': [ // deprecated
-         'error',
-         'any',
-         'Number',
-         'number',
-         'String',
-         'string',
-         'Boolean',
-         'boolean',
-         'Undefined',
-         'undefined'
-      ],
       'guard-for-in': 'error',
       'spaced-comment': [
          'error',
