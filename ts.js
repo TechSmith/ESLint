@@ -145,7 +145,8 @@
       '@typescript-eslint/prefer-optional-chain': 'error',
       '@typescript-eslint/prefer-reduce-type-parameter': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-      '@typescript-eslint/prefer-ts-expect-error': 'error'
+      '@typescript-eslint/prefer-ts-expect-error': 'error',
+      '@typescript-eslint/no-non-null-assertion': 'off'
    };
 
    module.exports = {
