@@ -113,6 +113,7 @@
       ],
       '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/unified-signatures': 'error',
+      'consistent-return': 'off',
       "@typescript-eslint/explicit-function-return-type": [
          "error",
          {
