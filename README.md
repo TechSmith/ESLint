@@ -4,7 +4,6 @@ ESLint rules for JavaScript and TypeScript
 ## Use
 - Install this package and eslint, e.g. `npm install --save-dev eslint-config-techsmith eslint`
 - Decide which ruleset is appropriate for you. If you're using TypeScript, you should use the `techsmith/ts` ruleset. For ES6 (or modern JS in general) you should use `techsmith/es6`. For old school JS, you can use the plain `techsmith` ruleset. The examples below are for the `techsmith/es6` ruleset, so substitute as appropriate.
-- Depending on which ruleset you use, you may need to install additional plugins to your dependencies. Once you go to run the eslint command, you may get an error like `ESLint couldn't find the plugin "eslint-plugin-prefer-arrow".` - fix this by installing the plugin, e.g. `npm install --save-dev eslint-plugin-prefer-arrow`. The reason why these depedencies aren't explicit dependencies of this package is that the plugins you'll need depends on the ruleset you use.
 - Create an `eslintConfig` entry in your package.json file referencing the TechSmith ESLint rules, e.g.:
 
 ```
@@ -51,7 +50,7 @@ ESLint rules for JavaScript and TypeScript
 }
 ```
 
-- If you're using React, you can additionally use the React rulesets `techsmith/react` or `techsmith/react-ts` (this will require installing additional plugins - run the linting and you should get error messages specifying which ones). Here's an example config that runs React linting for both JS and TS:
+- If you're using React, you can additionally use the React rulesets `techsmith/react` or `techsmith/react-ts`. Here's an example config that runs React linting for both JS and TS:
 
 ```javascript
 {
