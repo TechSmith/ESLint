@@ -71,7 +71,7 @@
       ],
       '@typescript-eslint/member-ordering': 'error',
       '@typescript-eslint/naming-convention': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-parameter-properties': 'off',
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': [
