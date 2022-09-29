@@ -139,6 +139,15 @@
       'no-constant-condition': 'off',
       '@typescript-eslint/no-unnecessary-condition': 'error',
       'no-useless-constructor': 'off',
+      'no-magic-numbers': 'off',
+      '@typescript-eslint/no-magic-numbers': ['error', {
+         ignoreArrayIndexes: true,
+         ignore: [-1, 0, 1, 2, 10, 60, 100, 1000],
+         ignoreEnums: true,
+         ignoreNumericLiteralTypes: true,
+         ignoreReadonlyClassProperties: true,
+         ignoreTypeIndexes: true
+      }],
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/non-nullable-type-assertion-style': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
