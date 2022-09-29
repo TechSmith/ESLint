@@ -94,9 +94,11 @@
       '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'error',
+      'quotes': 'off',
       '@typescript-eslint/quotes': [
          'error',
-         'single'
+         'single',
+         {'avoidEscape': true}
       ],
       'semi': 'off',
       '@typescript-eslint/semi': [
@@ -134,6 +136,7 @@
       'no-throw-literal': 'off',
       '@typescript-eslint/no-throw-literal': 'error',
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+      'no-constant-condition': 'off',
       '@typescript-eslint/no-unnecessary-condition': 'error',
       'no-useless-constructor': 'off',
       '@typescript-eslint/no-useless-constructor': 'error',
