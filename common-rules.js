@@ -100,7 +100,7 @@
       'no-nested-ternary': error(),
       'no-new-object': error(),
       'no-tabs': error(),
-      'no-trailing-spaces': error({skipBlankLines: true}),
+      'no-trailing-spaces': error({skipBlankLines: false}),
       'no-unneeded-ternary': error(),
       'no-whitespace-before-property': error(),
       'object-curly-spacing': error(),
