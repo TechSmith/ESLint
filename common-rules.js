@@ -104,6 +104,9 @@
       'no-unneeded-ternary': error(),
       'no-whitespace-before-property': error(),
       'object-curly-spacing': error(),
+      'object-curly-newline': error(),
+      'object-property-newline': error({allowAllPropertiesOnSameLine: true}),
+      'function-call-argument-newline': error('consistent'),
       'one-var': error('never'),
       'padded-blocks': error({
          blocks: 'never',
