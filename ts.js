@@ -116,14 +116,14 @@
       '@typescript-eslint/type-annotation-spacing': 'error',
       '@typescript-eslint/unified-signatures': 'error',
       'consistent-return': 'off',
-      "@typescript-eslint/explicit-function-return-type": [
-         "error",
+      '@typescript-eslint/explicit-function-return-type': [
+         'error',
          {
-            "allowExpressions": true,
-            "allowTypedFunctionExpressions": true,
-            "allowHigherOrderFunctions": false,
-            "allowDirectConstAssertionInArrowFunctions": false,
-            "allowConciseArrowFunctionExpressionsStartingWithVoid": false
+            'allowExpressions': true,
+            'allowTypedFunctionExpressions': true,
+            'allowHigherOrderFunctions': false,
+            'allowDirectConstAssertionInArrowFunctions': false,
+            'allowConciseArrowFunctionExpressionsStartingWithVoid': false
          }
       ],
       '@typescript-eslint/no-inferrable-types': ['error', {'ignoreParameters': true}],
@@ -158,7 +158,21 @@
       '@typescript-eslint/prefer-reduce-type-parameter': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
       '@typescript-eslint/prefer-ts-expect-error': 'error',
-      '@typescript-eslint/no-non-null-assertion': 'off'
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'brace-style': 'off',
+      '@typescript-eslint/brace-style': 'error',
+      'comma-spacing': 'off',
+      '@typescript-eslint/comma-spacing': 'error',
+      'func-call-spacing': 'off',
+      '@typescript-eslint/func-call-spacing': 'error',
+      'keyword-spacing': 'off',
+      '@typescript-eslint/keyword-spacing': 'error',
+      'object-curly-spacing': 'off',
+      '@typescript-eslint/object-curly-spacing': 'error',
+      'space-before-blocks': 'off',
+      '@typescript-eslint/space-before-blocks': 'error',
+      'space-infix-ops': 'off',
+      '@typescript-eslint/space-infix-ops': 'error'
    };
 
    module.exports = {
