@@ -172,7 +172,8 @@
       'space-before-blocks': 'off',
       '@typescript-eslint/space-before-blocks': 'error',
       'space-infix-ops': 'off',
-      '@typescript-eslint/space-infix-ops': 'error'
+      '@typescript-eslint/space-infix-ops': 'error',
+      'no-undef': 'off'
    };
 
    module.exports = {
