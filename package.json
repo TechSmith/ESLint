@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-techsmith",
-  "version": "3.2.1",
+  "version": "4.0.0",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
