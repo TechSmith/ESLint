@@ -1,0 +1,17 @@
+{
+   "compilerOptions": {
+      "strict": true,
+      "jsx": "react-jsx",
+      "target": "es2021",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "noUnusedLocals": true,
+      "inlineSources": true,
+      "sourceMap": true,
+      "allowSyntheticDefaultImports": true,
+      "newLine": "lf",
+      "noEmitOnError": true,
+      "skipLibCheck": true,
+      "noUncheckedIndexedAccess": true
+   }
+}

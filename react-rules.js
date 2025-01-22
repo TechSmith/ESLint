@@ -50,13 +50,13 @@ const styleRules = {
    '@stylistic/jsx-closing-bracket-location': 'error',
    '@stylistic/jsx-closing-tag-location': 'error',
    '@stylistic/jsx-wrap-multilines': ['error', {
-      'declaration': 'parens-new-line',
-      'assignment': 'parens-new-line',
-      'return': 'parens-new-line',
-      'arrow': 'parens-new-line',
-      'condition': 'parens-new-line',
-      'logical': 'parens-new-line',
-      'prop': 'parens-new-line'
+      declaration: 'parens-new-line',
+      assignment: 'parens-new-line',
+      return: 'parens-new-line',
+      arrow: 'parens-new-line',
+      condition: 'parens-new-line',
+      logical: 'parens-new-line',
+      prop: 'parens-new-line'
    }],
    '@stylistic/jsx-self-closing-comp': 'error'
 };

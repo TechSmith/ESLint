@@ -1,3 +1,4 @@
+/* eslint-disable @stylistic/quote-props */
 // https://github.com/typescript-eslint/typescript-eslint/blob/e4f5a52212738996b3cf3dedb66510b9b75b07b6/packages/typescript-eslint/src/configs/recommended.ts
 const tsRecommended = {
    '@typescript-eslint/ban-ts-comment': 'error',
@@ -22,7 +23,7 @@ const tsRecommended = {
    '@typescript-eslint/no-wrapper-object-types': 'error',
    '@typescript-eslint/prefer-as-const': 'error',
    '@typescript-eslint/prefer-namespace-keyword': 'error',
-   '@typescript-eslint/triple-slash-reference': 'error',
+   '@typescript-eslint/triple-slash-reference': 'error'
 };
 
 // https://github.com/typescript-eslint/typescript-eslint/blob/e4f5a52212738996b3cf3dedb66510b9b75b07b6/packages/eslint-plugin/src/configs/recommended-type-checked-only.ts
@@ -53,20 +54,20 @@ const tsRulesWithTypeChecking = {
    '@typescript-eslint/require-await': 'error',
    '@typescript-eslint/restrict-plus-operands': 'error',
    '@typescript-eslint/restrict-template-expressions': 'error',
-   '@typescript-eslint/unbound-method': 'error',
- };
+   '@typescript-eslint/unbound-method': 'error'
+};
 
 const typescriptRules = {
    '@typescript-eslint/array-type': [
       'error',
       {
-         'default': 'array'
+         default: 'array'
       }
    ],
-   '@typescript-eslint/ban-types': [
+   '@typescript-eslint/no-restricted-types': [
       'error',
       {
-         'types': {
+         types: {
             'Object': {
                'message': 'Avoid using the `Object` type. Did you mean `object`?'
             },
@@ -128,7 +129,7 @@ const typescriptRules = {
    '@typescript-eslint/unified-signatures': 'error',
    'consistent-return': 'off',
    '@typescript-eslint/explicit-function-return-type': [
-      error,
+      'error',
       {
          allowExpressions: true,
          allowTypedFunctionExpressions: true,
@@ -182,7 +183,7 @@ const tsStyleRules = {
          }
       }
    ],
-   '@stylistic/type-annotation-spacing': 'error',
+   '@stylistic/type-annotation-spacing': 'error'
 };
 
 module.exports = {

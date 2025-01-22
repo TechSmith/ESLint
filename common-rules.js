@@ -1,3 +1,5 @@
+/* eslint-disable no-magic-numbers */
+/* eslint-disable @stylistic/quote-props */
 // just gonna hard-code these. Easier to reason about than extending the opaque ruleset
 // from https://github.com/eslint/eslint/blob/17f2aaec16d5afbb0d219bce6ae01d7b15d74828/packages/js/src/configs/eslint-recommended.js
 const eslintRecommendedRules = {
