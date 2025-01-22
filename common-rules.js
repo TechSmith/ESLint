@@ -56,7 +56,7 @@ const eslintRecommendedRules = {
    'no-unsafe-optional-chaining': 'error',
    'no-unused-labels': 'error',
    'no-unused-private-class-members': 'error',
-   'no-unused-vars': 'error',
+   'no-unused-vars': ['error', {caughtErrors: 'none'}],
    'no-useless-backreference': 'error',
    'no-useless-catch': 'error',
    'no-useless-escape': 'error',
@@ -175,7 +175,6 @@ const es6Rules = {
 const styleRules = {
    '@stylistic/array-bracket-newline': ['error', 'consistent'], // MJB arbitrarily added this
    '@stylistic/array-bracket-spacing': ['error', 'never'],
-   '@stylistic/array-element-newline': ['error', 'consistent'],
    '@stylistic/arrow-parens': ['error', 'as-needed'],
    '@stylistic/arrow-spacing': 'error',
    '@stylistic/brace-style': 'error',
@@ -203,7 +202,6 @@ const styleRules = {
    '@stylistic/key-spacing': 'error',
    '@stylistic/keyword-spacing': 'error',
    '@stylistic/max-statements-per-line': 'error',
-   '@stylistic/multiline-ternary': ['error', 'always-multiline'], // MJB arbitrarily added this
    '@stylistic/new-parens': 'error',
    '@stylistic/no-extra-semi': 'error',
    '@stylistic/no-floating-decimal': 'error', // MJB arbitrarily added this
@@ -228,7 +226,7 @@ const styleRules = {
    '@stylistic/object-curly-newline': 'error',
    '@stylistic/object-curly-spacing': 'error',
    '@stylistic/object-property-newline': ['error', {allowAllPropertiesOnSameLine: true}],
-   '@stylistic/operator-linebreak': ['error', 'before'], // MJB arbitrarily added this
+   '@stylistic/operator-linebreak': ['error', 'before', {overrides: {'=': 'after'}}], // MJB arbitrarily added this
    '@stylistic/padded-blocks': ['error', {
       blocks: 'never',
       classes: 'never',

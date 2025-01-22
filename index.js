@@ -21,6 +21,11 @@ module.exports = (ignores, globals) => [
       },
       languageOptions: {
          globals
+      },
+      settings: {
+         react: {
+            version: 'detect'
+         }
       }
    }, {
       name: 'base js rules',

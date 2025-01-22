@@ -30,6 +30,7 @@ const customRules = {
    'react/react-in-jsx-scope': 'off',
    'react/jsx-no-useless-fragment': 'error',
    'react/jsx-fragments': 'error',
+   'react/no-multi-comp': 'off',
    'react/prop-types': 'off' // this is fine for JS but irrelevant for TS. Let's not branch the config.
 };
 

@@ -19,7 +19,7 @@ const tsRecommended = {
    'no-unused-expressions': 'off',
    '@typescript-eslint/no-unused-expressions': 'error',
    'no-unused-vars': 'off',
-   '@typescript-eslint/no-unused-vars': 'error',
+   '@typescript-eslint/no-unused-vars': ['error', {caughtErrors: 'none'}],
    '@typescript-eslint/no-wrapper-object-types': 'error',
    '@typescript-eslint/prefer-as-const': 'error',
    '@typescript-eslint/prefer-namespace-keyword': 'error',
@@ -114,6 +114,7 @@ const typescriptRules = {
    ],
    'no-empty-function': 'off',
    'no-use-before-define': 'off',
+   '@typescript-eslint/no-empty-object-type': ['error', {allowInterfaces: 'always'}],
    '@typescript-eslint/no-use-before-define': 'error',
    '@typescript-eslint/no-var-requires': 'error',
    '@typescript-eslint/prefer-for-of': 'error',
@@ -166,7 +167,9 @@ const typescriptRules = {
    '@typescript-eslint/prefer-reduce-type-parameter': 'error',
    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
    '@typescript-eslint/prefer-ts-expect-error': 'error',
-   'no-undef': 'off'
+   'no-undef': 'off',
+   '@typescript-eslint/prefer-promise-reject-errors': 'off',
+   '@typescript-eslint/no-require-imports': 'off'
 };
 
 const tsStyleRules = {
