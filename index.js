@@ -1,14 +1,19 @@
-(function () {
-   var commonRules = require('./common-rules');
-   var error = function () {
-      return ['error'].concat(Array.prototype.slice.call(arguments));
-   };
+const commonRules = require('./common-rules');
 
-   module.exports = {
-      env: {
-         browser: true
-      },
-      extends: 'eslint:recommended',
-      rules: commonRules
-   };
-}());
+module.exports = {
+   env: {
+      browser: true,
+      es6: true
+   },
+   parserOptions: {
+      ecmaVersion: 6,
+      sourceType: 'module',
+      ecmaFeatures: {
+         jsx: true
+      }
+   },
+   plugins: [
+      'eslint-plugin-prefer-arrow',
+   ],
+   rules: commonRules
+};
