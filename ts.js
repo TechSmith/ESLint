@@ -40,20 +40,6 @@ var typescriptRules = {
          'accessibility': 'no-public'
       }
    ],
-   'indent': 'off',
-   '@typescript-eslint/indent': [
-      'error',
-      3,
-      {
-         'SwitchCase': 1,
-         'FunctionDeclaration': {
-            'parameters': 'first'
-         },
-         'FunctionExpression': {
-            'parameters': 'first'
-         }
-      }
-   ],
    '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -92,17 +78,6 @@ var typescriptRules = {
    '@typescript-eslint/no-var-requires': 'error',
    '@typescript-eslint/prefer-for-of': 'error',
    '@typescript-eslint/prefer-function-type': 'error',
-   'quotes': 'off',
-   '@typescript-eslint/quotes': [
-      'error',
-      'single',
-      {'avoidEscape': true}
-   ],
-   'semi': 'off',
-   '@typescript-eslint/semi': [
-      'error',
-      'always'
-   ],
    '@typescript-eslint/triple-slash-reference': [
       'error',
       {
@@ -157,20 +132,6 @@ var typescriptRules = {
    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
    '@typescript-eslint/prefer-ts-expect-error': 'error',
    '@typescript-eslint/no-non-null-assertion': 'off',
-   'brace-style': 'off',
-   '@typescript-eslint/brace-style': 'error',
-   'comma-spacing': 'off',
-   '@typescript-eslint/comma-spacing': 'error',
-   'func-call-spacing': 'off',
-   '@typescript-eslint/func-call-spacing': 'error',
-   'keyword-spacing': 'off',
-   '@typescript-eslint/keyword-spacing': 'error',
-   'object-curly-spacing': 'off',
-   '@typescript-eslint/object-curly-spacing': 'error',
-   'space-before-blocks': 'off',
-   '@typescript-eslint/space-before-blocks': 'error',
-   'space-infix-ops': 'off',
-   '@typescript-eslint/space-infix-ops': 'error',
    'no-undef': 'off'
 };
 

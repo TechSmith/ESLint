@@ -1,5 +1,3 @@
-// no-extra-semi and no-mixed-spaces-and-tabs missing
-
 // just gonna hard-code these. Easier to reason about than extending the opaque ruleset
 // from https://github.com/eslint/eslint/blob/17f2aaec16d5afbb0d219bce6ae01d7b15d74828/packages/js/src/configs/eslint-recommended.js
 const eslintRecommendedRules = {
@@ -69,16 +67,8 @@ const eslintRecommendedRules = {
 const baseJsRules = {
    'no-console': 'error',
    'curly': ['error', 'all'],
-   'dot-location': ['error', 'property'],
    'dot-notation': 'error',
    'eqeqeq': ['error', 'always'],
-   'indent': ['error', 3, {
-      'SwitchCase': 1
-   }],
-   'quotes': ['error', 'single', {
-      avoidEscape: true
-   }],
-   'semi': ['error', 'always'],
    'strict': ['error', 'function'],
    'array-callback-return': 'error',
    'block-scoped-var': 'error',
@@ -98,7 +88,6 @@ const baseJsRules = {
       ignoreArrayIndexes: true,
       ignore: [-1, 0, 1, 2, 10, 60, 100, 1000]
    }],
-   'no-multi-spaces': 'error',
    'no-multi-str': 'error',
    'no-new-func': 'error',
    'no-new-wrappers': 'error',
@@ -119,70 +108,22 @@ const baseJsRules = {
    'no-void': ['error', {allowAsStatement: true}],
    'radix': 'error',
    'vars-on-top': 'error',
-   'wrap-iife': ['error', 'any'],
    'no-shadow': 'error',
    'no-undef-init': 'error',
    'no-undefined': 'error',
    'no-use-before-define': 'error',
-   'array-bracket-spacing': ['error', 'never'],
-   'brace-style': 'error',
    'camelcase': 'error',
-   'comma-dangle': 'error',
-   'comma-spacing': 'error',
-   'comma-style': 'error',
-   'computed-property-spacing': 'error',
-   'func-call-spacing': 'error',
    'func-names': ['error', 'never'],
    'func-style': 'error',
-   'key-spacing': 'error',
-   'keyword-spacing': 'error',
-   'max-statements-per-line': 'error',
    'new-cap': 'error',
-   'new-parens': 'error',
    'no-array-constructor': 'error',
    'no-bitwise': 'error',
    'no-lonely-if': 'error',
-   "no-mixed-operators": [
-      "error",
-      {
-         "groups": [
-            ["&", "|", "^", "~", "<<", ">>", ">>>"],
-            ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-            ["&&", "||"],
-            ["in", "instanceof"]
-         ],
-         "allowSamePrecedence": true
-      }
-   ],
    'no-multi-assign': 'error',
-   'no-multiple-empty-lines': 'error',
    'no-nested-ternary': 'error',
    'no-new-object': 'error',
-   'no-tabs': 'error',
-   'no-trailing-spaces': ['error', {skipBlankLines: false}],
    'no-unneeded-ternary': 'error',
-   'no-whitespace-before-property': 'error',
-   'object-curly-spacing': 'error',
-   'object-curly-newline': 'error',
-   'object-property-newline': ['error', {allowAllPropertiesOnSameLine: true}],
-   'function-call-argument-newline': ['error', 'consistent'],
    'one-var': ['error', 'never'],
-   'padded-blocks': ['error', {
-      blocks: 'never',
-      classes: 'never',
-      switches: 'never'
-   }],
-   'quote-props': ['error', 'as-needed'],
-   'semi-spacing': 'error',
-   'space-before-blocks': 'error',
-   'space-before-function-paren': ['error', {
-      'anonymous': 'never',
-      'asyncArrow': 'always',
-      'named': 'never'
-   }],
-   'space-in-parens': 'error',
-   'space-infix-ops': 'error',
-   'space-unary-ops': 'error',
    'unicode-bom': 'error',
    'no-invalid-this': 'error',
    'no-caller': 'error',
@@ -199,24 +140,11 @@ const baseJsRules = {
       'Undefined',
       'undefined'
    ],
-   'guard-for-in': 'error',
-   'spaced-comment': [
-      'error',
-      'always',
-      {
-         'markers': [
-            '/'
-         ]
-      }
-   ],
-   'no-multiple-empty-lines': ['error', {max: 1, maxEOF: 0, maxBOF: 0}]
+   'guard-for-in': 'error'
 };
 
 // probably no good reason to keep these separate anymore, but for historical reasons I guess I will.
 const es6Rules = {
-   'arrow-parens': ['error', 'as-needed'],
-   'arrow-spacing': 'error',
-   'generator-star-spacing': 'error',
    'no-duplicate-imports': 'error',
    'no-useless-computed-key': 'error',
    'no-useless-constructor': 'error',
@@ -228,10 +156,6 @@ const es6Rules = {
    'prefer-rest-params': 'error',
    'prefer-spread': 'error',
    'prefer-template': 'error',
-   'rest-spread-spacing': 'error',
-   'template-curly-spacing': 'error',
-   'yield-star-spacing': 'error',
-   'jsx-quotes': 'error',
    'prefer-arrow/prefer-arrow-functions': 'error',
    'max-classes-per-file': [
       'error',
@@ -241,6 +165,110 @@ const es6Rules = {
       'error',
       'as-needed'
    ]
-}
+};
 
-module.exports = {...eslintRecommendedRules, ...baseJsRules, ...es6Rules};
+// Eslint deprecated styling rules, these are now maintained in a plugin
+// https://github.com/eslint-stylistic/eslint-stylistic/blob/dd40b057bcec2309c8c0697429990dee838915c2/packages/eslint-plugin/configs/customize.ts
+// https://eslint.org/blog/2023/10/deprecating-formatting-rules/
+const styleRules = {
+   '@stylistic/array-bracket-newline': ['error', 'consistent'], // MJB arbitrarily added this
+   '@stylistic/array-bracket-spacing': ['error', 'never'],
+   '@stylistic/array-element-newline': ['error', 'consistent'],
+   '@stylistic/arrow-parens': ['error', 'as-needed'],
+   '@stylistic/arrow-spacing': 'error',
+   '@stylistic/brace-style': 'error',
+   '@stylistic/comma-dangle': 'error',
+   '@stylistic/comma-spacing': 'error',
+   '@stylistic/comma-style': 'error',
+   '@stylistic/computed-property-spacing': 'error',
+   '@stylistic/dot-location': ['error', 'property'],
+   '@stylistic/func-call-spacing': 'error',
+   '@stylistic/function-call-argument-newline': ['error', 'consistent'],
+   '@stylistic/generator-star-spacing': 'error',
+   '@stylistic/indent': [
+      'error',
+      3,
+      {
+         SwitchCase: 1,
+         FunctionDeclaration: {
+            parameters: 'first'
+         },
+         FunctionExpression: {
+            parameters: 'first'
+         }
+      }
+   ],
+   '@stylistic/jsx-quotes': 'error',
+   '@stylistic/key-spacing': 'error',
+   '@stylistic/keyword-spacing': 'error',
+   '@stylistic/max-statements-per-line': 'error',
+   '@stylistic/multiline-ternary': ['error', 'always-multiline'], // MJB arbitrarily added this
+   '@stylistic/new-parens': 'error',
+   '@stylistic/no-extra-semi': 'error',
+   '@stylistic/no-floating-decimal': 'error', // MJB arbitrarily added this
+   '@stylistic/no-mixed-operators': [
+      'error',
+      {
+         groups: [
+            ['&', '|', '^', '~', '<<', '>>', '>>>'],
+            ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+            ['&&', '||'],
+            ['in', 'instanceof']
+         ],
+         allowSamePrecedence: true
+      }
+   ],
+   '@stylistic/no-mixed-spaces-and-tabs': 'error',
+   '@stylistic/no-multi-spaces': 'error',
+   '@stylistic/no-multiple-empty-lines': ['error', {max: 1, maxEOF: 0, maxBOF: 0}],
+   '@stylistic/no-tabs': 'error',
+   '@stylistic/no-trailing-spaces': ['error', {skipBlankLines: false}],
+   '@stylistic/no-whitespace-before-property': 'error',
+   '@stylistic/object-curly-newline': 'error',
+   '@stylistic/object-curly-spacing': 'error',
+   '@stylistic/object-property-newline': ['error', {allowAllPropertiesOnSameLine: true}],
+   '@stylistic/operator-linebreak': ['error', 'before'], // MJB arbitrarily added this
+   '@stylistic/padded-blocks': ['error', {
+      blocks: 'never',
+      classes: 'never',
+      switches: 'never'
+   }],
+   '@stylistic/quote-props': ['error', 'as-needed'],
+   '@stylistic/quotes': ['error', 'single', {
+      avoidEscape: true
+   }],
+   '@stylistic/rest-spread-spacing': 'error',
+   '@stylistic/semi': ['error', 'always'],
+   '@stylistic/semi-spacing': 'error',
+   '@stylistic/semi-style': 'error', // MJB arbitrarily added this
+   '@stylistic/space-before-blocks': 'error',
+   '@stylistic/space-before-function-paren': ['error', {
+      anonymous: 'never',
+      asyncArrow: 'always',
+      named: 'never'
+   }],
+   '@stylistic/space-in-parens': 'error',
+   '@stylistic/space-infix-ops': 'error',
+   '@stylistic/space-unary-ops': 'error',
+   '@stylistic/spaced-comment': [
+      'error',
+      'always',
+      {
+         markers: [
+            '/'
+         ]
+      }
+   ],
+   '@stylistic/switch-colon-spacing': 'error', // MJB arbitrarily added this
+   '@stylistic/template-curly-spacing': 'error',
+   '@stylistic/template-tag-spacing': 'error', // MJB arbitrarily added this
+   '@stylistic/wrap-iife': ['error', 'any'],
+   '@stylistic/yield-star-spacing': 'error'
+};
+
+module.exports = {
+   ...eslintRecommendedRules,
+   ...baseJsRules,
+   ...es6Rules,
+   ...styleRules
+};
