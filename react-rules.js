@@ -57,7 +57,8 @@ const styleRules = {
       'condition': 'parens-new-line',
       'logical': 'parens-new-line',
       'prop': 'parens-new-line'
-   }]
+   }],
+   '@stylistic/jsx-self-closing-comp': 'error'
 };
 
 const hookRules = {
