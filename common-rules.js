@@ -198,7 +198,6 @@ const styleRules = {
          }
       }
    ],
-   '@stylistic/jsx-quotes': 'error',
    '@stylistic/key-spacing': 'error',
    '@stylistic/keyword-spacing': 'error',
    '@stylistic/max-statements-per-line': 'error',
