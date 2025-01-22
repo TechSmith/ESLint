@@ -22,7 +22,25 @@ module.exports = getTscLintingConfig(['node_modules/*'], globals.browser);
 module.exports = [
    ...getTscLintingConfig(['node_modules/*'], globals.browser),
    {
-      files: ['**/*.ts?(x)']
+      rules: {
+         'no-console': [
+            'error',
+            {allow: ['debug', 'info', 'warn', 'error', 'time', 'timeEnd']}
+         ]
+      }
+   },
+   {
+      files: ['**/*.ts', '**/*.tsx'],
+      rules: {
+         '@typescript-eslint/restrict-plus-operands': 'off',
+         '@typescript-eslint/no-unsafe-member-access': 'off',
+         '@typescript-eslint/no-unsafe-call': 'off',
+         '@typescript-eslint/no-unsafe-assignment': 'off',
+         '@typescript-eslint/no-unsafe-argument': 'off',
+         '@typescript-eslint/prefer-nullish-coalescing': 'off',
+         'prefer-arrow/prefer-arrow-functions': ['error', {classPropertiesAllowed: true}],
+         '@typescript-eslint/consistent-type-imports': ['error', {fixStyle: 'inline-type-imports'}]
+      }
    }
 ];
 ```
