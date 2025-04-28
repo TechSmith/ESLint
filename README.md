@@ -64,9 +64,10 @@ module.exports = [
 This is a public npm package. These are the steps for releasing
 
 1) Merge PR / update version number in package.json
-2) npm login
-3) Enter credentials for npm login obtained from the usual place credentials are stored (leaving this deliberately vague since this is a public repo)
-4) npm publish
+2) Get 'TSC NPM Publish Token' frmo the usual place credentials are stored (leaving this deliberately vague since this is a public repo)
+3) **In your command window**: `npm set //registry.npmjs.org/:_authToken ##THEPUBLISHTOKENRETRIEVEDINSTEP2##`
+   - In command window so it only persists for the duration of your local terminal session
+4) `npm publish`
 
 ## Testing
 
