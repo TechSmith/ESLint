@@ -114,7 +114,7 @@ const typescriptRules = {
    ],
    'no-empty-function': 'off',
    'no-use-before-define': 'off',
-   '@typescript-eslint/no-empty-object-type': ['error', { allowInterfaces: 'always' }],
+   '@typescript-eslint/no-empty-object-type': ['error', {allowInterfaces: 'always'}],
    '@typescript-eslint/no-use-before-define': 'error',
    '@typescript-eslint/no-var-requires': 'error',
    '@typescript-eslint/prefer-for-of': 'error',
@@ -139,8 +139,8 @@ const typescriptRules = {
          allowConciseArrowFunctionExpressionsStartingWithVoid: false
       }
    ],
-   '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
-   '@typescript-eslint/no-misused-promises': ['error', { checksConditionals: true, checksVoidReturn: false }],
+   '@typescript-eslint/no-inferrable-types': ['error', {ignoreParameters: true}],
+   '@typescript-eslint/no-misused-promises': ['error', {checksConditionals: true, checksVoidReturn: false}],
    '@typescript-eslint/class-literal-property-style': 'error',
    '@typescript-eslint/no-confusing-non-null-assertion': 'error',
    '@typescript-eslint/no-extraneous-class': 'error',
