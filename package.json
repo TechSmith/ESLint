@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-techsmith",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint": "^9.39.2",
