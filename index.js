@@ -6,8 +6,9 @@ const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const preferArrowPlugin = require('eslint-plugin-prefer-arrow');
 const tsEslint = require('typescript-eslint');
 const stylisticPlugin = require('@stylistic/eslint-plugin');
+const importPlugin = require('eslint-plugin-import-x');
 
-module.exports = (ignores, globals) => [
+module.exports = (ignores, globals, srcForCheckingUnusedFiles) => [
    {
       name: 'global ignores',
       ignores: ignores
@@ -30,7 +31,20 @@ module.exports = (ignores, globals) => [
    }, {
       name: 'base js rules',
       files: ['**/*.?(m|c)@(j|t)s?(x)'],
-      rules: commonRules
+      plugins: {'import-x': importPlugin},
+      rules: {
+         ...commonRules,
+         ...(srcForCheckingUnusedFiles
+            ? {'import-x/no-unused-modules': ['error', {unusedExports: true, src: srcForCheckingUnusedFiles}]}
+            : {}
+         )
+      },
+      settings: {
+         'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+         'import-x/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx']
+         }
+      }
    }, {
       name: 'react rules',
       files: ['**/*.?(m|c)jsx', '**/*.?(m|c)tsx'],

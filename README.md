@@ -45,6 +45,16 @@ module.exports = [
 ];
 ```
 
+## Opt-in unused export checking
+
+If you'd like to opt-in to unused export linting, you can pass a third arg to `getTscLintingConfig` pointing to your sources, e.g. 
+
+```javascript
+getTscLintingConfig(['node_modules/*'], globals.browser, ['src/**'])
+```
+
+Due to a current issue in the plugin used, this will require you to create a blank `.eslintrc` file, otherwise you'll get an error telling you to do so. :shrug:
+
 ## Integrating into your build
 
 - Run eslint as part of your build to ensure your JavaScript is up to snuff!
