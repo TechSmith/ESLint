@@ -183,7 +183,7 @@ const styleRules = {
    '@stylistic/comma-style': 'error',
    '@stylistic/computed-property-spacing': 'error',
    '@stylistic/dot-location': ['error', 'property'],
-   '@stylistic/func-call-spacing': 'error',
+   '@stylistic/function-call-spacing': 'error',
    '@stylistic/function-call-argument-newline': ['error', 'consistent'],
    '@stylistic/generator-star-spacing': 'error',
    '@stylistic/indent': [
