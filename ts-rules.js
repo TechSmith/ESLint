@@ -98,7 +98,6 @@ const typescriptRules = {
          'accessibility': 'no-public'
       }
    ],
-   '@typescript-eslint/member-ordering': 'error',
    'no-shadow': 'off',
    '@typescript-eslint/no-shadow': [
       'error',
@@ -352,10 +351,10 @@ const typescriptRules = {
             // customized
             // 'decorated-method',
 
-            'method',
-         ],
-      },
-   }],
+            'method'
+         ]
+      }
+   }]
 };
 
 const tsStyleRules = {
