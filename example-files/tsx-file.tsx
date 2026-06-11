@@ -1,11 +1,15 @@
+import {a} from './ts-file';
+
 // missing return type
-const a = (b: number) => b + 1;
+const c = (b: number) => b + 1;
 
 // magic number
-a(5);
+c(5);
 
-// unused, missing return type
-const Component = () => (
+a(0);
+
+// missing return type, unused export
+export const Component = () => (
    <>
       <div>
          Hello world!

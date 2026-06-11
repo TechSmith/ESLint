@@ -1,4 +1,5 @@
-const a = () => 1;
+// unused export
+export const a = () => 1;
 
 // magic number
 a(5);
